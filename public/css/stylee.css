@@ -1,0 +1,92 @@
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #F4E1D2;
+    color: #4D3319;
+}
+
+.container {
+    margin: 16px;
+}
+
+/* Header */
+header {
+    background-color: #563B27;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 16px;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #F4E1D2;
+}
+
+h2, h3 {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0.5em 0;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+.header-link {
+    display: flex;
+}
+
+.header-link a {
+    display: inline-block;
+    padding: 8px 12px;
+    border: 2px solid #F4E1D2;
+    border-radius: 20px;
+    color: #F4E1D2;
+    text-decoration: none; 
+    margin-left: 10px;
+    margin-right: 25px;
+}
+
+.header-link a:hover {
+    background-color: #F4E1D2;
+    color: #563B27;
+}
+
+/* Main content */
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    margin: 2em 0;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: #4D3319;
+    padding: 1em;
+    margin-top: 2em;
+}
+
+footer a {
+    color: #F4E1D2;
+    text-decoration: none;
+    margin-left: 1em;
+}
+
+/* Other styles */
+/* Add your additional styles here */

@@ -180,18 +180,21 @@ select {
     margin-bottom: 1em;
 }
 
+/* Ajoutez ces styles à votre feuille de style CSS, après votre reset.css */
+
 .presentation-boutique {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Pour espacer les éléments sur la ligne */
+    align-items: center; /* Centrer verticalement */
 }
-
-.table.horraire {
-    flex-basis: 50%;
-}
-
-
 
 .img-boutique {
-    display: flex;
-    justify-content: center;
+    width: 100%; /* L'image prendra toute la largeur de son conteneur parent */
+    max-width: none; /* Supprimez la limitation de la largeur maximale */
 }
+
+.boutiquetext, .table-horraire {
+    width: calc(50% - 10px); /* 50% de la largeur du conteneur parent moins un peu d'espace pour la marge entre les deux éléments */
+}
+
+
