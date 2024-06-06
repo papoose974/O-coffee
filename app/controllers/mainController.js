@@ -1,21 +1,41 @@
+const dataMapper = require('./../dataMapper');
+
 maintController = {
 
-    homePage: (req, res) => {
-        res.render ('accueil');
+    homePage: async (req, res) => {
+        try {
+        const coffees = await dataMapper.getAllCoffee();    
+        res.render ('accueil', { coffee });
+        } catch (error) {
+        console.log(error);
+        res.status(500).send('Erreur 500 - Le serveur ne répond pas ...');
+        }
     },
 
-    articlePage: (req, res) => {
-        res.render ('article');
+    cataloguePage: async (req, res) => {
+        try {
+        const coffee = await dataMapper.getAllCoffee();    
+        res.render ('catalogue', { coffee });
+        } catch (error) {
+        console.log(error);
+        res.status(500).send('Erreur 500 - Le serveur ne répond pas ...');
+        }
+    },
+                
+    articlePage: async (req, res) => {
+        try {
+        const id = parseInt(req.params.id, 10);
+        const coffee = await dataMapper.getAllCoffee(id);    
+        res.render ('article', { coffee });
+        } catch (error) {
+        console.log(error);
+        res.status(500).send('Erreur 500 - Le serveur ne répond pas ...');
+        }
     },
 
     boutiquePage: (req, res) => {
         res.render ('boutique');
     },
-
-    cataloguePage: (req, res) => {
-        res.render ('catalogue');
-    },
-
 };
 
 

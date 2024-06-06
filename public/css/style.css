@@ -196,5 +196,3 @@ select {
 .boutiquetext, .table-horraire {
     width: calc(50% - 10px); /* 50% de la largeur du conteneur parent moins un peu d'espace pour la marge entre les deux éléments */
 }
-
-
