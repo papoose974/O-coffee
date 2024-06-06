@@ -196,3 +196,22 @@ select {
 .boutiquetext, .table-horraire {
     width: calc(50% - 10px); /* 50% de la largeur du conteneur parent moins un peu d'espace pour la marge entre les deux éléments */
 }
+
+.sectionCatalogue {
+    display: flex;
+    justify-content: center;
+}
+
+.divCatalogue {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    height: 100vh;
+}
+
+.coffeeItem {
+    flex: 1;
+    max-width: 20%; /* Vous avez besoin de 5 éléments donc 100% / 5 = 20% */
+    padding: 10px;
+    box-sizing: border-box;
+}
