@@ -8,7 +8,7 @@ const dataMapper = {
         return result.rows;
         },
     getCoffeebyID: async (id) => {
-        const query = 'SELECT * FROM your_table_name WHERE id = $1';
+        const query = 'SELECT * FROM "ocoffee" WHERE "id" = $1';
         const values = [id];
         const result = await client.query(query, values);
     return result.rows[0];

@@ -8,7 +8,7 @@ maintController = {
         res.render ('accueil', { coffees });
         } catch (error) {
         console.log(error);
-        res.status(500).send('Erreur 500 - Le serveur ne répond pas ...');
+        res.status(500).render('404');
         }
     },
 
@@ -18,23 +18,29 @@ maintController = {
         res.render ('catalogue', { coffees });
         } catch (error) {
         console.log(error);
-        res.status(500).send('Erreur 500 - Le serveur ne répond pas ...');
+        res.status(500).render('404');
         }
     },
                
     articlePage: async (req, res) => {
         try {
         const id = parseInt(req.params.id, 10);
-        const coffees = await dataMapper.getAllCoffee();    
-        res.render ('article', { coffees });
+        const coffeebyId = await dataMapper.getCoffeebyID(id);  
+        console.log(coffeebyId);  
+        res.render ('article', { coffeebyId });
         } catch (error) {
         console.log(error);
-        res.status(500).send('Erreur 500 - Le serveur ne répond pas ...');
+        res.status(500).render('404');
         }
     },
 
     boutiquePage: (req, res) => {
+        try {
         res.render ('boutique');
+        } catch (error) {
+        console.log(error);
+        res.status(500).render('404');
+        }
     },
 };
 

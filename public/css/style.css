@@ -1,4 +1,4 @@
-* {
+ {
     margin-left: 1em;
     margin-right: 1em;
 }
@@ -214,4 +214,9 @@ select {
     max-width: 20%; /* Vous avez besoin de 5 éléments donc 100% / 5 = 20% */
     padding: 10px;
     box-sizing: border-box;
+}
+
+img {
+    width: auto;
+    height: auto;
 }

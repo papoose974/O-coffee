@@ -1,31 +1,19 @@
 <%- include('partials/head') %> 
 
-    <h2>Bienvenue chez O'Coffee</h2>
+    <h2>O-Coffee : L'essence même de la perfection dans chaque tasse !</h2>
 
 <div class="container">
 
 <div class="presentation">
 
-    <h3>Qui sommes-nous ?</h3><!---->
+    <p>Découvrez O-Coffee, le paradis pour les amateurs de café ! Depuis deux décennies, O-Coffee est une destination incontournable pour les connaisseurs de café en quête d'une expérience gustative exceptionnelle. Notre sélection soigneusement élaborée offre un éventail de cafés d'exception, provenant des quatre coins du globe, torréfiés avec passion pour révéler toute leur richesse aromatique.
 
-    <p>Jean et Jacques Pepper, deux frères passionnés par le café, sont les fondateurs 
-    de notre boutique. Avec une expertise approfondie et un amour profond pour cette 
-    délicieuse boisson, ils ont créé un espace où le café est célébré comme une expérience 
-    raffinée et inspirante.</p>
+    Que vous préfériez les notes fruitées d'un café africain ou la profondeur d'un arabica d'Amérique du Sud, notre gamme variée saura satisfaire vos papilles les plus exigeantes. En ligne, la plateforme conviviale d'O-Coffee vous permet de parcourir aisément nos différentes variétés, de sélectionner vos grains préférés, et de les recevoir directement chez vous, fraîchement torréfiés.
     
-    <p>Bienvenue dans notre boutique, où règne une ambiance chaleureuse et accueillante qui éveille tous vos sens. Dès que vous franchissez la porte, vous êtes enveloppé d'une douce symphonie d'arômes envoûtants de café fraîchement moulu.L'atmosphère est empreinte d'une lueur chaleureuse, avec des lumières tamisées qui créent des jeux d'ombres et de lumières apaisants. Les murs sont ornés d'éléments rustiques, de panneaux en bois et de photographies captivantes de plantations de café,évoquant l'origine de ces délices aromatiques.
+    Pour une expérience sensorielle complète, visitez nos boutiques O-Coffee où nos baristas experts se feront un plaisir de vous conseiller et de préparer votre café sur mesure, dans une atmosphère chaleureuse et accueillante. Rejoignez-nous dans notre passion pour le café et laissez-vous envoûter par l'arôme envoûtant de nos cafés d'exception, une tradition qui perdure depuis deux décennies.
 .   </p>
-    
-    <h3>Notre savoir faire</h3>
-    <p>Jean et Jacques Pepper, deux frères passionnés par l'univers du café, ont toujours rêvé 
-    de créer leur propre boutique de café haut de gamme. L'occasion de concrétiser ce rêve est 
-    arrivée lors d'un voyage inoubliable en Colombie, un pays célèbre pour ses plantations de café renommées dans le monde entier.
-    Pendant leur séjour en Colombie, Jean et Jacques ont eu la chance de visiter une plantation 
-    de café pittoresque, nichée au cœur des montagnes verdoyantes. Ils ont été immédiatement 
-    captivés par l'atmosphère envoûtante et l'engagement des agriculteurs locaux à cultiver les meilleurs grains de café.
-    Au cours de cette visite, ils ont eu l'occasion de rencontrer des producteurs de café passionnés qui leur ont partagé leurs connaissances et leur amour pour le processus de culture, de récolte et de transformation du café. Jean et Jacques ont été fascinés par l'attention méticuleuse portée àchaque étape de la production, ainsi que par la diversité des saveurs et des arômes uniques 
-que les différents terroirs colombiens offraient.
-</p>
+
+<a href="/catalogue">VOIR LES PRODUITS</a>
 
 </div>
 
@@ -38,29 +26,21 @@ que les différents terroirs colombiens offraient.
 <div class="novelty">
 
     <div class="new-coffee">
-        <img class="imgCatalogue" src="/images/Brazil Santos.png" alt="Café">
-        <h2>Nom du café</h2>
-        <p>Prix : 10€</p>
-        <p>Description : Un café délicieux avec des arômes riches et une saveur exquise.</p>
-        <a href="/article/:id">Voir le produit</a>
-    </div>
-
-    <div class="new-coffee">
-        <img class="imgCatalogue" src="/images/Kenya AA.png" alt="Café">
-        <h2>Nom du café</h2>
-        <p>Prix : 10€</p>
-        <p>Description : Un café délicieux avec des arômes riches et une saveur exquise.</p>
-        <a href="/article/:id">Voir le produit</a>
-    </div>
-
-    <div class="new-coffee">
-        <img class="imgCatalogue" src="/images/Kenya AA.png" alt="Café">
-        <h2>Nom du café</h2>
-        <p>Prix : 10€</p>
-        <p>Description : Un café délicieux avec des arômes riches et une saveur exquise.</p>
-        <a href="/article/:id">Voir le produit</a>
+        <% for (let id = 0; id < 3; id++) { %>
+        <img class="imgCatalogue" src="/images/<%= coffees[id].name %>.png" alt="Café">
+        <h2><%= coffees[id].name %></h2>
+        <p>P<%= coffees[id].price %></p>
+        <p><%= coffees[id].description %></p>
+        <a href="/article/<%= coffees[id].id %>">Voir le produit</a>
+    <% } %>
     </div>
 
 </div>
+
 <%- include('partials/foot') %> 
+
+
+
+    
+
 

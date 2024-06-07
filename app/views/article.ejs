@@ -1,39 +1,36 @@
 <%- include ('partials/head') %> 
 
 
-<img class="img-article" src="/images/100955890.png" alt="">
+<img class="img-article" src="/images/<%= coffeebyId.name %>.png" alt="">
 
    <section class="description">
    <div class="article">
-       <p><%= coffee.description %></p>
+       
     </div>
-
+<p><%= coffeebyId.description %></p>
 <div class="table.container">
     <table class="table">
         <tbody>
             <tr>
                 <td>Intensité</td>
-                <td>Moyen</td>
+                <td><%= coffeebyId.intensity %></td>
             </tr>
             <tr>
                 <td>Origine</td>
-                <td>Colombie</td>
+                <td><%= coffeebyId.origine %></td>
             </tr>
             <tr>
                 <td>Varieté</td>
-                <td>100% Arabica</td>
-            </tr>
-            <tr>
-                <td>Caractére</td>
-                <td>Equilibré</td>
+                <td><%= coffeebyId.variety %></td>
             </tr>
         </tbody>
     </table>
+    
 </div>
     </section>
 
     <section class="selection">
-            <label for="weight">Choisissez votre poid :</label>
+            <label for="weight">Choisissez votre poids :</label>
             <select id="weight" name="poid">
                 <option value="100g">100 grammes</option>
                 <option value="250g">250 grammes</option>

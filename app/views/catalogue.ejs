@@ -3,12 +3,15 @@
 <section class="sectionCatalogue">
 <div class="divCatalogue">
         <% for (const coffee of coffees)  { %>
+            <div class="coffeeYtem">
         <img src="/images/<%= coffee.name %>.png" alt="Café">
         <h2><%= coffee.name %></h2>
         <p>Prix : <%= coffee.price %></p>
         <p>Description : <%= coffee.description %></p>
         <p>Origine : <%= coffee.origine %></p>
         <p>Intensité : <%= coffee.intensity %></p>
+        <a href="/article/<%= coffee.id %>">VOIR LE PRODUIT</a>
+    </div>
     <% } %>
         </div>
     </section> 
