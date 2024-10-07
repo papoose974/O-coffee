@@ -1,6 +1,6 @@
 const dataMapper = require('./../dataMapper');
 
-maintController = {
+mainController = {
 
     homePage: async (req, res) => {
         try {
@@ -45,4 +45,4 @@ maintController = {
 };
 
 
-module.exports = maintController;
+module.exports = mainController;
